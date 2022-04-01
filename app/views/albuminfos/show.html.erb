@@ -1,34 +1,50 @@
+<div class="header">
+  <span><%= link_to 'Safe and Sound', home_index_path %></span>
+
+  <div class="menu">
+    <div class="btn_new">
+      <%= link_to 'Nouvel album', new_albuminfo_path %>
+    </div>
+
+    <div class="btn_liste">
+      <%= link_to 'Liste', albuminfos_path %>
+    </div>
+  </div>
+
+</div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @albuminfo.title %>
-</p>
+<div class="liste_show">
 
-<p>
-  <strong>Artists:</strong>
-  <%= @albuminfo.artists %>
-</p>
+  <div class="pochette">
+    <img src="<%= @albuminfo.cover %>">
+  </div>
 
-<p>
-  <strong>Cover:</strong>
-  <%= @albuminfo.cover %>
-</p>
+  <div class="liste_infos">
 
-<p>
-  <strong>Duration:</strong>
-  <%= @albuminfo.duration %>
-</p>
+    <div class="info_liste, titre">
+      <%= @albuminfo.title %>
+    </div>
 
-<p>
-  <strong>Tracks:</strong>
-  <%= @albuminfo.tracks %>
-</p>
+    <div class="info_liste, artiste">
+      <%= @albuminfo.artists %>
+    </div>
 
-<p>
-  <strong>Release:</strong>
-  <%= @albuminfo.release %>
-</p>
+    <div class="info_liste, durée">
+      <%= @albuminfo.duration.strftime('%H:%M:%S') %>
+    </div>
 
-<%= link_to 'Edit', edit_albuminfo_path(@albuminfo) %> |
-<%= link_to 'Back', albuminfos_path %>
+    <div class="info_liste, tracks">
+      <%= @albuminfo.tracks %> titres
+    </div>
+
+    <div class="info_liste, release">
+      <%= @albuminfo.release %>
+    </div>
+  </div>
+
+</div>
+
+<%= link_to 'Modifier', edit_albuminfo_path(@albuminfo) %> |
+<%= link_to 'Retour à la liste', albuminfos_path %>

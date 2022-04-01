@@ -1,47 +1,33 @@
-<%= form_with(model: albuminfo) do |form| %>
-  <% if albuminfo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(albuminfo.errors.count, "error") %> prohibited this albuminfo from being saved:</h2>
+<%= simple_form_for(@albuminfo) do |f| %>
 
-      <ul>
-        <% albuminfo.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <section class="formulaire">
+    <div class="champs">
+
+      <div class="info">
+        <%= f.input :title %>
+      </div>
+      <div class="info">
+        <%= f.input :artists %>
+      </div>
+      <div class="info">
+        <%= f.input :release %>
+      </div>
+      <div class="info">
+        <%= f.input :tracks %>
+      </div>
+      <div class="info">
+        <%= f.input :duration %>
+      </div>
+
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+    <div class="cover">
+      <%= f.input :cover %>
+    </div>
 
-  <div class="field">
-    <%= form.label :artists %>
-    <%= form.text_area :artists %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cover %>
-    <%= form.text_area :cover %>
-  </div>
-
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.time_select :duration %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tracks %>
-    <%= form.number_field :tracks %>
-  </div>
-
-  <div class="field">
-    <%= form.label :release %>
-    <%= form.number_field :release %>
-  </div>
+  </section>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>

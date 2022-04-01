@@ -1,37 +1,58 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+  <span><%= link_to 'Safe and Sound', home_index_path %></span>
 
-<h1>Albuminfos</h1>
+  <div class="menu">
+    <div class="btn_new">
+      <%= link_to 'Nouvel album', new_albuminfo_path %>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Artists</th>
-      <th>Cover</th>
-      <th>Duration</th>
-      <th>Tracks</th>
-      <th>Release</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="btn_liste">
+      <%= link_to 'Liste', albuminfos_path %>
+    </div>
+  </div>
 
-  <tbody>
-    <% @albuminfos.each do |albuminfo| %>
-      <tr>
-        <td><%= albuminfo.title %></td>
-        <td><%= albuminfo.artists %></td>
-        <td><%= albuminfo.cover %></td>
-        <td><%= albuminfo.duration %></td>
-        <td><%= albuminfo.tracks %></td>
-        <td><%= albuminfo.release %></td>
-        <td><%= link_to 'Show', albuminfo %></td>
-        <td><%= link_to 'Edit', edit_albuminfo_path(albuminfo) %></td>
-        <td><%= link_to 'Destroy', albuminfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+</div>
+
+<h1>Liste des albums</h1>
+
+
+  <% @albuminfos.each do |albuminfo| %>
+
+      <div class="album">
+
+        <img src="<%= albuminfo.cover %>">
+
+        <div class="liste_index">
+
+          <div class="ligne1">
+            <div class="titre">
+              <%= albuminfo.title %>
+            </div>
+            <div class="artiste">
+              <%= albuminfo.artists %>
+            </div>
+          </div>
+
+          <div class="ligne2">
+            <div class="durée">
+              <%= albuminfo.duration %>
+            </div>
+            <div class="tracks">
+              <%= albuminfo.tracks %> titres
+            </div>
+            <div class="release">
+              <%= albuminfo.release %>
+            </div>
+          </div>
+
+          <div class="options">
+            <%= link_to 'Fiche album', albuminfo %>
+            <%= link_to 'Modifier', edit_albuminfo_path(albuminfo) %>
+            <%= link_to 'Supprimer', albuminfo, method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer ?' } %>
+          </div>
+
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
-
-<%= link_to 'New Albuminfo', new_albuminfo_path %>

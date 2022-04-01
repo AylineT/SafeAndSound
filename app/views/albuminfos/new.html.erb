@@ -1,5 +1,20 @@
-<h1>New Albuminfo</h1>
+<div class="header">
+  <span><%= link_to 'Safe and Sound', home_index_path %></span>
+
+  <div class="menu">
+    <div class="btn_new">
+      <%= link_to 'Nouvel album', new_albuminfo_path %>
+    </div>
+
+    <div class="btn_liste">
+      <%= link_to 'Liste', albuminfos_path %>
+    </div>
+  </div>
+
+</div>
+
+<h1>Nouvel album</h1>
 
 <%= render 'form', albuminfo: @albuminfo %>
 
-<%= link_to 'Back', albuminfos_path %>
+<%= link_to 'Retour', albuminfos_path %>

@@ -1,6 +1,23 @@
-<h1>Editing Albuminfo</h1>
+<div class="header">
+  <span><%= link_to 'Safe and Sound', home_index_path %></span>
 
-<%= render 'form', albuminfo: @albuminfo %>
+  <div class="menu">
+    <div class="btn_new">
+      <%= link_to 'Nouvel album', new_albuminfo_path %>
+    </div>
 
-<%= link_to 'Show', @albuminfo %> |
-<%= link_to 'Back', albuminfos_path %>
+    <div class="btn_liste">
+      <%= link_to 'Liste', albuminfos_path %>
+    </div>
+  </div>
+
+</div>
+
+<section class="edit">
+
+  <h1>Modifier l'album</h1>
+
+  <%= render 'form', albuminfo: @albuminfo %>
+
+  <%= link_to 'Retour', albuminfos_path %>
+</section>

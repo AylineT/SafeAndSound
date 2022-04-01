@@ -1,0 +1,204 @@
+//@import "bootstrap-sprockets"; {}
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+*{
+  text-decoration: none;
+
+  h1{
+  font-family: 'Yanone Kaffeesatz', sans-serif ;
+  font-weight: 400;
+  font-size: 60px;
+  justify-content: center;
+  }
+}
+
+h2{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+h3{
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+
+  span{
+    font-family: 'Yanone Kaffeesatz', sans-serif ;
+    font-weight: 400;
+    font-size: 60px;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+  }
+}
+
+.home{
+  color: black;
+  margin: 20px;
+
+  h1, h2, h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  h1{
+    margin: 50px;
+  }
+  h2, h3{
+    margin: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: #ee935e;
+  }
+}
+
+.formulaire{
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+
+  label {
+    width: 70px;
+  }
+
+  input, textarea{
+    padding: 5px;
+    min-height: unset;
+    height: 40px;
+  }
+
+  .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .champs{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .cover{
+    width: 40%;
+  }
+}
+
+.edit{
+
+}
+
+
+.liste_show{
+  display: flex;
+  margin: 20px;
+
+  .img{
+    width: 35%;
+  }
+
+  .liste_infos{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+
+    .info_liste{
+      margin: 10px;
+    }
+  }
+}
+
+.album{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.album{
+  margin: 20px;
+
+    img {
+      width: 20%;
+    }
+
+
+  .liste_index{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px;
+  }
+
+  .ligne1, .ligne2{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .options{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    align-self: flex-end;
+  }
+}
+
+
+.actions {
+  border-radius: 8px solid #000 ;
+  color: black;
+}
+
+.formulaire {
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.champs{
+  justify-content: space-between;
+  color: black;
+}
+
+textarea, input{
+  margin: 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.info{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  display: block;
+}
