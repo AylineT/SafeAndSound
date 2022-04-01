@@ -2,11 +2,11 @@
   <span><%= link_to 'Safe and Sound', home_index_path %></span>
 
   <div class="menu">
-    <div class="btn_new">
+    <div class="btn_new btn">
       <%= link_to 'Nouvel album', new_albuminfo_path %>
     </div>
 
-    <div class="btn_liste">
+    <div class="btn_liste btn">
       <%= link_to 'Liste', albuminfos_path %>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
   <h1>Modifier l'album</h1>
 
-  <%= render 'form', albuminfo: @albuminfo %>
+  <%= render 'form', albuminfo: @albuminfo, :class => "btn" %>
 
-  <%= link_to 'Retour', albuminfos_path %>
+  <%= link_to 'Retour', albuminfos_path, :class => "btn" %>
 </section>

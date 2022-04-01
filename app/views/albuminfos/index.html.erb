@@ -2,11 +2,11 @@
   <span><%= link_to 'Safe and Sound', home_index_path %></span>
 
   <div class="menu">
-    <div class="btn_new">
+    <div class="btn_new btn">
       <%= link_to 'Nouvel album', new_albuminfo_path %>
     </div>
 
-    <div class="btn_liste">
+    <div class="btn_liste btn">
       <%= link_to 'Liste', albuminfos_path %>
     </div>
   </div>
@@ -46,9 +46,9 @@
           </div>
 
           <div class="options">
-            <%= link_to 'Fiche album', albuminfo %>
-            <%= link_to 'Modifier', edit_albuminfo_path(albuminfo) %>
-            <%= link_to 'Supprimer', albuminfo, method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer ?' } %>
+            <%= link_to 'Fiche album', albuminfo, :class => "btn"%>
+            <%= link_to 'Modifier', edit_albuminfo_path(albuminfo), :class => "btn" %>
+            <%= link_to 'Supprimer', albuminfo, :class => "btn", method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer ?' } %>
           </div>
 
         </div>
