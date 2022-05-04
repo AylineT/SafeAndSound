@@ -1,13 +1,13 @@
 <div class="header">
-  <span><%= link_to 'Safe and Sound', home_index_path %></span>
+  <span class="title"><%= link_to 'Safe and Sound', home_index_path, :class => "title" %></span>
 
   <div class="menu">
-    <div class="btn_new btn">
-      <%= link_to 'Nouvel album', new_albuminfo_path %>
+    <div class="btn_new">
+      <%= link_to 'Nouvel album', new_albuminfo_path, :class => "btn" %>
     </div>
 
-    <div class="btn_liste btn">
-      <%= link_to 'Liste', albuminfos_path %>
+    <div class="btn_liste">
+      <%= link_to 'Liste', albuminfos_path, :class => "btn" %>
     </div>
   </div>
 
@@ -15,6 +15,8 @@
 
 <h1>Nouvel album</h1>
 
-<%= render 'form', albuminfo: @albuminfo, :class => "btn" %>
+<%= render 'form', albuminfo: @albuminfo%>
 
-<%= link_to 'Retour', albuminfos_path, :class => "btn" %>
+<div class="btn_creer">
+  <%= link_to 'Retour', albuminfos_path, :class => "btn" %>
+</div>

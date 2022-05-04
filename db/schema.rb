@@ -26,4 +26,15 @@ ActiveRecord::Schema.define(version: 2022_03_31_122924) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "albums", force: :cascade do |t|
+    t.string "title"
+    t.text "artists"
+    t.text "cover"
+    t.time "duration"
+    t.integer "tracks"
+    t.integer "release"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end
